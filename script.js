@@ -129,18 +129,33 @@
 // console.log(rotated);
 
 //9.Object Sorting: Write a function that takes an array of objects with 'name' and 'age' properties and sorts the objects based on age in ascending order.
-function objectSorting() {
-  let arrayOfObj = [
-    { name: "rohan", age: 25 },
-    { name: "jimesh", age: 34 },
-    { name: "kailash", age: 30 },
-    { name: "radhika", age: 31 },
-  ];
-  arrayOfObj.sort((tempOne, tempTwo) => {
-    return tempOne.age - tempTwo.age;
-  });
-  console.log(arrayOfObj);
-}
-objectSorting();
+// function objectSorting() {
+//   let arrayOfObj = [
+//     { name: "rohan", age: 25 },
+//     { name: "jimesh", age: 34 },
+//     { name: "kailash", age: 30 },
+//     { name: "radhika", age: 31 },
+//   ];
+//   arrayOfObj.sort((tempOne, tempTwo) => {
+//     return tempOne.age - tempTwo.age;
+//   });
+//   console.log(arrayOfObj);
+// }
+// objectSorting();
 
 //10.Array Intersection: Write a function that takes two arrays as input and returns an array containing the elements that are present in both arrays.
+
+function arrayInterSection(arrOne, arrTwo) {
+  let finalArray = [];
+  for (let i = 0; i < arrOne.length; i++) {
+    let arrayElementOne = arrOne[i];
+    for (let j = 0; j < arrTwo.length; j++) {
+      let arrayElementTwo = arrTwo[j];
+      if (arrayElementOne == arrayElementTwo) {
+        finalArray.push(arrayElementOne);
+      }
+    }
+  }
+  console.log(finalArray);
+}
+arrayInterSection([5, 7, 3, 2, 9, 0], [5, 7, 1, 4, 0]);
