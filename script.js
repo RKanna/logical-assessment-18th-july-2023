@@ -105,15 +105,42 @@
 // ]);
 //7.Largest Difference: Write a function that takes an array of numbers as input and returns the largest difference between any two elements in the array.
 
-function largestDifference(numbers) {
-  const minimumValue = Math.min(...numbers);
-  const maxValue = Math.max(...numbers);
-  return maxValue - minimumValue;
-}
-const numbers = [10, 5, 8, 2, 0, 4, 3, 1];
-const result = largestDifference(numbers);
-console.log(result);
+// function largestDifference(numbers) {
+//   const minimumValue = Math.min(...numbers);
+//   const maxValue = Math.max(...numbers);
+//   return maxValue - minimumValue;
+// }
+// const numbers = [10, 5, 8, 2, 0, 4, 3, 1];
+// const result = largestDifference(numbers);
+// console.log(result);
 
 //8.Array Rotation: Write a function that rotates elements of an array to the left by a given number of positions.
+
+// function rotateArrayLeft(arr, position) {
+//   let length = arr.length;
+//   position = position % length;
+//   let portionOne = arr.slice(position);
+//   let portionTwo = arr.slice(0, position);
+//   let rotatedArray = portionOne.concat(portionTwo);
+//   return rotatedArray;
+// }
+// let array = [1, 2, 3, 4, 5];
+// let rotated = rotateArrayLeft(array, 3);
+// console.log(rotated);
+
 //9.Object Sorting: Write a function that takes an array of objects with 'name' and 'age' properties and sorts the objects based on age in ascending order.
+function objectSorting() {
+  let arrayOfObj = [
+    { name: "rohan", age: 25 },
+    { name: "jimesh", age: 34 },
+    { name: "kailash", age: 30 },
+    { name: "radhika", age: 31 },
+  ];
+  arrayOfObj.sort((tempOne, tempTwo) => {
+    return tempOne.age - tempTwo.age;
+  });
+  console.log(arrayOfObj);
+}
+objectSorting();
+
 //10.Array Intersection: Write a function that takes two arrays as input and returns an array containing the elements that are present in both arrays.
